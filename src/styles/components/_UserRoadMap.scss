@@ -40,6 +40,9 @@
       align-items: center;
 
       .point {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         min-width: 75px;
         height: 75px;
         border-radius: 100%;
