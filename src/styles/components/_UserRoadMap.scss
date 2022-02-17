@@ -1,0 +1,236 @@
+@use "../variables/variables";
+.roadMap {
+  background-color: #32474a;
+  padding-bottom: 10px;
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 5% 20%;
+    h1 {
+      font-family: $inter;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 44px;
+      color: #ffffff;
+    }
+    p {
+      font-family: $poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 28px;
+      color: #ffffff;
+    }
+  }
+  .timeline {
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    padding-bottom: 10%;
+    counter-reset: section;
+    ul li {
+      margin-bottom: -80px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .point {
+        min-width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        z-index: 2;
+        position: relative;
+        left: 1px;
+        background: #ffffff;
+        border: 12px solid #2c4245;
+        box-sizing: border-box;
+      }
+      .point::before {
+        font-family: $poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #32474a;
+        counter-increment: section;
+        content: counter(section);
+      }
+    }
+  }
+}
+
+@include laptop-screen {
+  .roadMap {
+    .heading {
+      padding: 5% 15%;
+    }
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      width: 70%;
+      ul li {
+        margin-bottom: -40px;
+        .point {
+          min-width: 60px;
+          height: 60px;
+          border: 10px solid #2c4245;
+        }
+        .point::before {
+          font-family: $poppins;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 23px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #32474a;
+          counter-increment: section;
+          content: counter(section);
+        }
+      }
+    }
+  }
+}
+
+@include large-screen-phone {
+  .roadMap {
+    .heading {
+      padding: 5% 10%;
+      h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      width: 90%;
+      ul li {
+        margin-bottom: 0px;
+        .point {
+          min-width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background: #ffffff;
+          border: 8px solid #2c4245;
+        }
+      }
+    }
+  }
+}
+
+@include small-screen-phone {
+  .roadMap {
+    .heading {
+      padding: 3%;
+    }
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      ul li {
+        margin-bottom: 0px;
+        .point {
+          min-width: 30px;
+          height: 30px;
+        }
+        .point::before {
+          font-weight: 600;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          counter-increment: section;
+          content: counter(section);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  html,
+  body {
+    font-size: 10px;
+  }
+
+  p {
+    padding: 10px !important;
+  }
+}
+
+.timeline ul li .content {
+  width: 50%;
+  padding: 0 10px;
+}
+
+.timeline ul li:nth-child(odd) .content {
+  padding-left: 0;
+}
+
+.timeline ul li:nth-child(odd) .date {
+  padding-right: 0;
+}
+
+.timeline ul li:nth-child(even) .content {
+  padding-right: 0;
+}
+
+.timeline ul li:nth-child(even) .date {
+  padding-left: 0;
+}
+
+.timeline ul li .date {
+  width: 50%;
+  padding: 0 10px;
+  font-weight: normal;
+}
+
+.timeline ul li .date h4 {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.timeline ul li .content p {
+  padding: 10px 20px;
+  background: #2c4245;
+  margin-top: 0;
+  text-align: center;
+  border-radius: 20px;
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 172%;
+  color: #ffffff;
+}
+
+.timeline ul li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline ul li:nth-child(even) .date h4 {
+  float: right;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  left: 50%;
+  background: linear-gradient(180.25deg, #89aa8b -3.14%, #fff3e9 113.24%);
+  box-shadow: 0px 4px 4px 0px #00000040;
+}

@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 67px 15% 0px 15%;
+  margin: 0px 15%;
   .Logo {
     display: flex;
     justify-content: flex-end;
@@ -56,13 +56,39 @@
   justify-content: flex-end;
   width: 95%;
   img {
-    width: 10%;
+    width: 100%;
+  }
+}
+
+@include desktop-screen {
+  .ourSolution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 15%;
+    .Logo {
+      display: flex;
+      justify-content: flex-end;
+      width: 85%;
+      img {
+        width: 70px;
+        height: 78px;
+        transform: rotate(-45deg);
+      }
+    }
   }
 }
 
 @include tablet-screen {
   .ourSolution {
     margin: 0%;
+    .Logo {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
     .imgWithText {
       display: flex;
       align-items: center;
@@ -99,6 +125,12 @@
 @include small-screen-phone {
   .ourSolution {
     margin: 0%;
+    .Logo {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
     .imgWithText {
       display: flex;
       align-items: center;

@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 218px 15% 188px 15%;
+  margin: 0px 15%;
   .imgWithText {
     display: flex;
     align-items: center;
@@ -60,6 +60,18 @@
   }
 }
 
+@include desktop-screen {
+  .History {
+    .Logo {
+      img {
+        width: 70px;
+        height: 78px;
+        transform: rotate(25.76deg);
+      }
+    }
+  }
+}
+
 @include tablet-screen {
   .History {
     margin: 0%;
@@ -74,6 +86,13 @@
       .text {
         width: 100%;
         padding: 0 20%;
+      }
+    }
+    .Logo {
+      img {
+        width: 50px;
+        height: 50px;
+        transform: rotate(25.76deg);
       }
     }
   }
@@ -108,6 +127,13 @@
       }
       .text {
         width: 100%;
+      }
+    }
+    .Logo {
+      img {
+        width: 30px;
+        height: 30px;
+        transform: rotate(25.76deg);
       }
     }
   }
