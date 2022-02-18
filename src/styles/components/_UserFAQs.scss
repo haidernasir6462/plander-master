@@ -12,6 +12,7 @@
     font-size: 36px;
     line-height: 44px;
     color: #32474a;
+    padding-bottom: 70px;
   }
   .faq_container {
     gap: 20px;
@@ -62,9 +63,6 @@
         }
       }
     }
-    // .question_heading:active {
-    //   background-color: rgb(146, 61, 61);
-    // }
     .answer_dropdown {
       display: flex;
       justify-content: center;
@@ -148,7 +146,6 @@
     }
   }
 }
-
 
 @include small-screen-phone {
   .faqs_section {

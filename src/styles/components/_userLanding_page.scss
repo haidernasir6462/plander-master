@@ -3,3 +3,31 @@
   flex-direction: column;
   gap: 100px;
 }
+@include laptop-screen {
+  .landing_page{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+}
+@include tablet-screen {
+  .landing_page{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+@include large-screen-phone {
+  .landing_page{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+@include small-screen-phone {
+  .landing_page{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}

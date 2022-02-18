@@ -5,6 +5,7 @@ import UserOurSolution from '../components/UserOurSolution'
 import UserHistory from '../components/UserHistory'
 import RoadMap from '../components/RoadMap'
 import UserSubscription from '../components/UserSubscription'
+import Benefits from '../components/UserBenefits'
 import FAQs from '../components/FAQs'
 import Footer from '../components/Footer'
 
@@ -12,13 +13,14 @@ const LandingPage = () => {
 	return (
 		<div className="landing_page">
 			<UserHeader />
-			<UserOverTourism />
+			{/* <UserOverTourism />
 			<UserOurSolution />
 			<UserHistory />
-			<RoadMap />
-			<FAQs />
+			<RoadMap /> */}
+			<Benefits />
+			{/* <FAQs />
 			<UserSubscription/>
-			<Footer />
+			<Footer /> */}
 		</div>
 	)
 }
